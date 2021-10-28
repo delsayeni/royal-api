@@ -1,0 +1,29 @@
+{
+  "name": "jen/royalexex_apis",
+  "type": "project",
+  "description":"APIs for Royal Exec project",
+  "require": {
+    "illuminate/database": "^7.1",
+    "slim/slim": "^4.4",
+    "slim/psr7": "^1.0",
+    "firebase/php-jwt": "^5.2",
+    "phpmailer/phpmailer": "^6.1",
+    "psr/log": "^1.1",
+    "vlucas/phpdotenv": "^5.3",
+    "aws/aws-sdk-php": "^3.176",
+    "guzzlehttp/guzzle": "^7.0",
+    "edwinhoksberg/php-fcm": "^1.2"
+  },
+  "authors": [
+    {
+      "name": "Jen",
+      "email": "dontfindme@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Royal\\": "src/Royal/",
+      "Rashtell\\":"src/Rashtell/"
+    }
+  }
+}
