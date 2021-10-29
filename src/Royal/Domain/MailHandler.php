@@ -12,7 +12,7 @@ class MailHandler
     const TEMPLATE_TRANSFER_CONFIRMATION = 4;
     const TEMPLATE_TRANSFER_STATUS = 5;
 
-    public $from = "no-reply@liveetapp.com";
+    public $from = "no-reply@royalsexecutive.com";
     public $fromName = "Royal Executive";
     private $template = "";
     private $to = "";
@@ -37,16 +37,16 @@ class MailHandler
                             <title>Confirm Your Account</title>
                         </head>
                         <body>
-                            <div style='width: 640px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;'>
-                                <h1 align='center'>Hello, {$username}</h1>
-                                <div align='center'>
+                            <div style='width: 640px; font-family: Arial, Helvetica, sans-serif; font-size: 15px;'>
+                                <h1>Hello, {$username}</h1>
+                                <div>
                                     <p>
                                         Thank you for registering on Royal Executive Investment Bank & Companies.
                                     </p>
                                     <p>
                                         Please find below your One Time Pin (OTP) to use in completing your registration.
                                     </p>
-                                    <p>
+                                    <p align='center'>
                                         <strong style='text-align: center; font-size: 16px;'>{$otp}</strong>
                                     </p>
                                 </div>
@@ -74,13 +74,13 @@ class MailHandler
                             <title>Forgot Password</title>
                         </head>
                         <body>
-                            <div style='width: 640px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;'>
-                            <h1 align='center'>Hello, {$username}</h1>
-                                <div align='center'>
+                            <div style='width: 640px; font-family: Arial, Helvetica, sans-serif; font-size: 15px;'>
+                            <h1>Hello, {$username}</h1>
+                                <div >
                                     <p>
                                         Please find below your One Time Pin (OTP) to use in completing your password reset.
                                     </p>
-                                    <p>
+                                    <p align='center'>
                                         <strong style='text-align: center; font-size: 16px;'>{$otp}</strong>
                                     </p>
                                 </div>
