@@ -29,7 +29,7 @@ class Mailer
         $mail->IsSMTP();
 
         $mail->Host = 'smtp.titan.email';
-        $mail->Port = 465;
+        $mail->Port = 587;
         $mail->SMTPSecure = 'tls';
         $mail->SMTPAuth = true;
         $mail->isHTML(true);
@@ -40,9 +40,7 @@ class Mailer
 
         //Set who the message is to be sent from
         $mail->setFrom($this->from, $this->fromName);
-
-        $mail->AddEmbeddedImage('assets/logo.png', 'app_logo');
-
+        
         //Set an alternative reply-to address
         $mail->addReplyTo($this->from, $this->fromName);
 
