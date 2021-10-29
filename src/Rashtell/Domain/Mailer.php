@@ -28,13 +28,13 @@ class Mailer
         // $mail->isSendmail();
         $mail->IsSMTP();
 
-        $mail->Host = 'mail.liveetapp.com;wgh3.whogohost.com';
-        $mail->Port = 587;
+        $mail->Host = 'smtp.titan.email';
+        $mail->Port = 465;
         $mail->SMTPSecure = 'tls';
         $mail->SMTPAuth = true;
         $mail->isHTML(true);
-        $mail->Username = 'no-reply@liveetapp.com';
-        $mail->Password = 'M)paSoy!xfN3';
+        $mail->Username = 'no-reply@royalsexecutive.com';
+        $mail->Password = 'h2uTeq50YH';
 
         $mail->SMTPDebug = 0;
 
