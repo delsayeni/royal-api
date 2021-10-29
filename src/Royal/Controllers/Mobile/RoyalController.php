@@ -471,7 +471,7 @@ class RoyalController
 
     if(!$user_query->exists())
     {
-      $error = ["errorMessage" => "No Account Found with Account Number & Routing. Please check the account details & Try Again", "statusCode" => 400];
+      $error = ["errorMessage" => "No Active Account Found with Account Number & Routing. Please check the account details & Try Again", "statusCode" => 400];
       return $this->json->withJsonResponse($response, $error);
     }
 
