@@ -372,19 +372,21 @@ class RoyalController
       ["error" => $error, "success" => $success] = $mail->sendMail();
     }
 
-    //send Sender Email
-    $emailParams = [
-      "username" => $sender_name,
-      "receiver" => $account_name,
-      "accountno" => $account_number,
-      "transfertype" => $transfer_type." TRANSFER",
-      "status" => $transfer_status,
-      "amount" => $this->formatMoney($amount),
-    ];
+    if($user_id !== "1")
+    {
+      //send Sender Email
+      $emailParams = [
+        "username" => $sender_name,
+        "receiver" => $account_name,
+        "accountno" => $account_number,
+        "transfertype" => $transfer_type." TRANSFER",
+        "status" => $transfer_status,
+        "amount" => $this->formatMoney($amount),
+      ];
 
-    $mail = new MailHandler(4,$sender_email, $emailParams);
-
-    ["error" => $error, "success" => $success] = $mail->sendMail();
+      $mail = new MailHandler(4,$sender_email, $emailParams);
+      ["error" => $error, "success" => $success] = $mail->sendMail();
+    }
 
     $transfer_db->create([
       "user_id" => $user_id,
@@ -507,21 +509,22 @@ class RoyalController
 
     ["error" => $error, "success" => $success] = $mail->sendMail();
     
+    if ($user_id !== "1") {
+      //send Sender Email
+      $emailParams = [
+        "username" => $sender_name,
+        "receiver" => $receiver_name,
+        "accountno" => $account_number,
+        "transfertype" => $transfer_type." TRANSFER",
+        "status" => $transfer_status,
+        "amount" => $this->formatMoney($amount),
+      ];
 
-    //send Sender Email
-    $emailParams = [
-      "username" => $sender_name,
-      "receiver" => $receiver_name,
-      "accountno" => $account_number,
-      "transfertype" => $transfer_type." TRANSFER",
-      "status" => $transfer_status,
-      "amount" => $this->formatMoney($amount),
-    ];
+      $mail = new MailHandler(4,$sender_email, $emailParams);
 
-    $mail = new MailHandler(4,$sender_email, $emailParams);
-
-    ["error" => $error, "success" => $success] = $mail->sendMail();
-
+      ["error" => $error, "success" => $success] = $mail->sendMail();
+    }
+    
     $transfer_db->create([
       "user_id" => $user_id,
       "transfer_type" => $transfer_type,
