@@ -33,8 +33,8 @@ class Mailer
         $mail->SMTPSecure = 'tls';
         $mail->SMTPAuth = true;
         $mail->isHTML(true);
-        $mail->Username = 'no-reply@royalsexecutive.com';
-        $mail->Password = 'h2uTeq50YH';
+        $mail->Username = 'emails@royalsexecutive.com';
+        $mail->Password = 'ePKPxQinVA';
 
         $mail->SMTPDebug = 0;
 

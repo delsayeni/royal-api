@@ -12,7 +12,7 @@ class MailHandler
     const TEMPLATE_TRANSFER_CONFIRMATION = 4;
     const TEMPLATE_TRANSFER_STATUS = 5;
 
-    public $from = "no-reply@royalsexecutive.com";
+    public $from = "emails@royalsexecutive.com";
     public $fromName = "Royal Executive";
     private $template = "";
     private $to = "";
